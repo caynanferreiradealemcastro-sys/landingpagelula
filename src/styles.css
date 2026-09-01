@@ -1,0 +1,65 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  /* Paleta — Token / Valor / Uso conforme briefing */
+  --background: 0 0% 4%;          /* #0A0A0A — fundo geral (preto) */
+  --forest: 0 100% 27%;           /* #8B0000 — vermelho profundo (blocos, hovers) */
+  --accent: 0 100% 27%;           /* alias de --forest */
+  --gold: 355 83% 41%;            /* #C1121F — vermelho de destaque (CTAs, detalhes) */
+  --primary: 355 83% 41%;         /* alias de --gold */
+  --paper: 0 0% 95%;              /* #F2F2F2 — texto principal */
+  --foreground: 0 0% 95%;         /* alias de --paper */
+  --muted-foreground: 0 0% 63%;   /* #A0A0A0 — texto secundário */
+  --border: 0 0% 100%;
+  --border-opacity: 0.1;
+}
+
+* {
+  border-color: hsl(var(--border) / var(--border-opacity));
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  background-color: hsl(var(--background));
+  color: hsl(var(--foreground));
+  font-family: "Barlow", sans-serif;
+  -webkit-font-smoothing: antialiased;
+}
+
+::selection {
+  background: hsl(var(--gold));
+  color: hsl(var(--background));
+}
+
+.font-display {
+  font-family: "Instrument Serif", serif;
+}
+
+.font-mono-label {
+  font-family: "JetBrains Mono", monospace;
+  letter-spacing: 0.22em;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}
+
+/* Foco visível para acessibilidade de teclado */
+a:focus-visible,
+button:focus-visible,
+summary:focus-visible {
+  outline: 2px solid hsl(var(--gold));
+  outline-offset: 3px;
+}
