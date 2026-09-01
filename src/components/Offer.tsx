@@ -22,7 +22,7 @@ export default function Offer() {
           </p>
 
           <div className="mt-8 flex items-end justify-center gap-2">
-            <span className="font-display text-6xl text-paper sm:text-7xl">R$37</span>
+            <span className="font-display text-6xl text-paper sm:text-7xl">R$19,90</span>
             <span className="pb-2 text-sm text-muted-foreground">à vista</span>
           </div>
 
@@ -36,7 +36,7 @@ export default function Offer() {
           </ul>
 
           <a
-            href="#"
+            href="https://go.perfectpay.com.br/PPU38CQFP5T"
             className="group mt-10 inline-flex w-full items-center justify-center gap-3 bg-gold px-8 py-4 font-mono-label text-[12px] uppercase text-paper transition-transform hover:-translate-y-0.5"
           >
             Quero o meu acesso
